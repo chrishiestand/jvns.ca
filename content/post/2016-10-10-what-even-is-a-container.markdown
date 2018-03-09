@@ -70,15 +70,15 @@ $ sudo cgcreate -a bork -g memory:mycoolgrou
 Let's see what's in it!
 ```
 $ ls -l /sys/fs/cgroup/memory/mycoolgroup/
--rw-r--r-- 1 bork root 0 Okt 10 23:16 memory.kmem.limit_in_bytes
--rw-r--r-- 1 bork root 0 Okt 10 23:14 memory.kmem.max_usage_in_bytes
+-rw-r--r-- 1 bork root 0 Okt 10 23:16 memory.limit_in_bytes
+-rw-r--r-- 1 bork root 0 Okt 10 23:14 memory.max_usage_in_bytes
 ```
 
 ooh, max usage in bytes! Okay, let's try that! 10 megabytes should be enough for anyone!
 10 megabytes should be enough for anyone!
 
 ```
-$ sudo echo 10000000 >  /sys/fs/cgroup/memory/mycoolgroup/memory.kmem.limit_in_bytes
+$ echo 10000000 >  /sys/fs/cgroup/memory/mycoolgroup/memory.limit_in_bytes
 ```
 
 Awesome, let's try using my cgroup!
