@@ -78,7 +78,7 @@ ooh, max usage in bytes! Okay, let's try that! 10 megabytes should be enough for
 10 megabytes should be enough for anyone!
 
 ```
-$ sudo echo 10000000 >  /sys/fs/cgroup/memory/mycoolgroup/memory.kmem.limit_in_bytes
+$ echo 10000000 >  /sys/fs/cgroup/memory/mycoolgroup/memory.kmem.limit_in_bytes
 ```
 
 Awesome, let's try using my cgroup!
